@@ -20,11 +20,11 @@ Essa página funciona diretamente no navegador. As fotos são arquivos locais; o
 
 ### Publicar no GitHub Pages
 
-O site estático é publicado automaticamente pelo GitHub Actions sempre que há um envio para a branch `main`. O fluxo publica `index.html` e as imagens de `src/assets`:
+O site estático é publicado automaticamente pelo GitHub Actions sempre que há um envio para a branch `main`. O fluxo publica `index.html` e as imagens de `src/assets`, além de solicitar a habilitação do GitHub Pages:
 
 1. Envie as alterações para o GitHub na branch `main`.
-2. No repositório, abra **Settings → Pages** e selecione **GitHub Actions** como origem da publicação, se ainda não estiver selecionada.
-3. Acompanhe a publicação em **Actions**. Quando o fluxo terminar, o endereço do site aparecerá nos detalhes da execução e em **Settings → Pages**.
+2. Acompanhe a publicação em **Actions**. Se a habilitação automática não estiver disponível, abra **Settings → Pages** e selecione **GitHub Actions** como origem da publicação.
+3. Quando o fluxo terminar, o endereço do site aparecerá nos detalhes da execução e em **Settings → Pages**.
 
 O endereço esperado deste projeto é `https://cargnieli2016.github.io/eufloria-garden-floricultura/`.
 
