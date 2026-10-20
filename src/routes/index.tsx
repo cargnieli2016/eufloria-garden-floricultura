@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { MapPin, Phone, Clock, Star, Leaf, Flower2, Sprout, Trees } from "lucide-react";
+import { MapPin, Phone, Clock, Leaf, Flower2, Sprout, Trees } from "lucide-react";
 import f1 from "@/assets/foto-1.webp.asset.json";
 import f2 from "@/assets/foto-2.webp.asset.json";
 import f3 from "@/assets/foto-3.webp.asset.json";
@@ -8,7 +8,7 @@ import f5 from "@/assets/foto-5.webp.asset.json";
 import f6 from "@/assets/foto-6.webp.asset.json";
 import f7 from "@/assets/foto-7.webp.asset.json";
 import f8 from "@/assets/foto-8.webp.asset.json";
-import video from "@/assets/eufloria.mp4.asset.json";
+import hero from "@/assets/hero-estufa.jpg.asset.json";
 
 const WHATS = "https://wa.me/5519981586113?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Eufloria%20Garden.";
 const MAPS =
@@ -36,7 +36,7 @@ const categorias = [
   { icon: Sprout, nome: "Mudas e forrações", img: f2.url },
 ];
 
-const galeria = [f1, f8, f6, f7, f4, f2];
+const galeria = [f8, f6, f7, f4, f2];
 
 const horarios = [
   ["Segunda a sábado", "08:00 – 18:00"],
@@ -47,14 +47,15 @@ function Index() {
   return (
     <div className="min-h-screen bg-background">
       <header className="absolute inset-x-0 top-0 z-20">
+        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-primary/95 via-primary/70 to-transparent" />
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 text-primary-foreground">
           <a href="#" className="flex items-center gap-2 font-display text-xl">
             <Leaf className="h-6 w-6" /> Eufloria Garden
           </a>
           <nav className="hidden gap-8 text-sm md:flex">
-            <a href="#plantas" className="opacity-90 hover:opacity-100">Plantas</a>
-            <a href="#galeria" className="opacity-90 hover:opacity-100">Galeria</a>
-            <a href="#visite" className="opacity-90 hover:opacity-100">Visite</a>
+            <a href="#plantas" className="font-medium opacity-100 hover:opacity-80">Plantas</a>
+            <a href="#galeria" className="font-medium opacity-100 hover:opacity-80">Galeria</a>
+            <a href="#visite" className="font-medium opacity-100 hover:opacity-80">Visite</a>
           </nav>
           <a href={WHATS} target="_blank" rel="noreferrer" className="rounded-full bg-accent px-5 py-2 text-sm font-semibold text-accent-foreground">
             WhatsApp
@@ -62,13 +63,10 @@ function Index() {
         </div>
       </header>
 
-      <section className="relative flex min-h-[92vh] items-end overflow-hidden">
-        <video src={video.url} poster={f8.url} autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover" />
+      <section className="relative flex min-h-[62vh] items-end overflow-hidden">
+        <img src={hero.url} alt="Estufa da Eufloria Garden com orquídeas e plantas" width={1920} height={500} fetchPriority="high" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-hero-overlay" />
-        <div className="relative mx-auto w-full max-w-6xl px-6 pb-20 text-primary-foreground">
-          <p className="mb-4 flex items-center gap-2 text-sm uppercase tracking-[0.25em]">
-            <Star className="h-4 w-4 fill-current" /> 5,0 no Google · Monte Mor - SP
-          </p>
+        <div className="text-legibility relative mx-auto w-full max-w-6xl px-6 pb-20 text-primary-foreground">
           <h1 className="max-w-3xl text-5xl leading-[1.05] md:text-7xl">
             Um jardim inteiro <em className="text-secondary">esperando</em> por você.
           </h1>
@@ -79,7 +77,7 @@ function Index() {
             <a href={WHATS} target="_blank" rel="noreferrer" className="rounded-full bg-accent px-7 py-3 font-semibold text-accent-foreground">
               Falar no WhatsApp
             </a>
-            <a href={MAPS} target="_blank" rel="noreferrer" className="rounded-full border border-primary-foreground/60 px-7 py-3 font-semibold">
+            <a href={MAPS} target="_blank" rel="noreferrer" className="rounded-full border border-primary-foreground/70 bg-primary-foreground/15 px-7 py-3 font-semibold backdrop-blur-sm">
               Como chegar
             </a>
           </div>
