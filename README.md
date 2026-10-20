@@ -52,13 +52,6 @@ Para executar os testes:
 npm test
 ```
 
-## 📍 Informações
-
-- **Endereço:** Rod. Jornalista Francisco Aguirre Proença, km 16,5 — Monte Mor, SP
-- **WhatsApp:** [(19) 98158-6113](https://wa.me/5519981586113)
-- **Segunda a sábado:** 08:00–18:00
-- **Domingo:** 08:00–13:00
-
 ## 🧰 Tecnologias
 
 - HTML e CSS na página estática
