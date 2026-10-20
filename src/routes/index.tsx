@@ -8,7 +8,6 @@ import f5 from "@/assets/foto-5.webp.asset.json";
 import f6 from "@/assets/foto-6.webp.asset.json";
 import f7 from "@/assets/foto-7.webp.asset.json";
 import f8 from "@/assets/foto-8.webp.asset.json";
-import hero from "@/assets/hero-estufa.jpg.asset.json";
 
 const WHATS = "https://wa.me/5519981586113?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Eufloria%20Garden.";
 const MAPS =
@@ -47,7 +46,6 @@ function Index() {
   return (
     <div className="min-h-screen bg-background">
       <header className="absolute inset-x-0 top-0 z-20">
-        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-primary/95 via-primary/70 to-transparent" />
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 text-primary-foreground">
           <a href="#" className="flex items-center gap-2 font-display text-xl">
             <Leaf className="h-6 w-6" /> Eufloria Garden
