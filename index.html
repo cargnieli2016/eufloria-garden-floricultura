@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Plantas ornamentais, flores, palmeiras, folhagens e vasos em Monte Mor - SP. Visite a Eufloria Garden ou fale pelo WhatsApp.">
+    <meta name="theme-color" content="#244b37">
+    <title>Floricultura Eufloria Garden | Plantas e flores em Monte Mor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        color-scheme: light;
+        --green: #244b37;
+        --green-deep: #193a2a;
+        --cream: #f7f5ec;
+        --sage: #e7edda;
+        --coral: #d96550;
+        --ink: #24352a;
+        --muted: #68746b;
+        --serif: "Fraunces", Georgia, serif;
+        --sans: "DM Sans", Arial, sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--cream);
+        font-family: var(--sans);
+        line-height: 1.6;
+      }
+      a { color: inherit; }
+      img { display: block; max-width: 100%; }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.12; }
+      h2 { margin-bottom: 0; color: var(--green); font-size: clamp(2.2rem, 5vw, 3.7rem); }
+      .wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+
+      .hero {
+        position: relative;
+        min-height: 690px;
+        overflow: hidden;
+        color: white;
+        background:
+          linear-gradient(90deg, rgb(19 48 32 / 82%) 0%, rgb(19 48 32 / 55%) 48%, rgb(19 48 32 / 12%) 100%),
+          url("src/assets/008.webp") center 48% / cover;
+      }
+      .site-header {
+        position: absolute;
+        inset: 0 0 auto;
+        z-index: 2;
+        color: white;
+      }
+      .header-inner {
+        min-height: 82px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: white;
+        font-family: var(--serif);
+        font-size: 1.35rem;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      .brand-mark { color: #d5e3bd; font-family: var(--sans); font-size: 1.6rem; }
+      .nav { display: flex; align-items: center; gap: 32px; }
+      .nav a { color: white; font-size: .94rem; text-decoration: none; }
+      .nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
+      .button {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 23px;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        background: var(--coral);
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+        transition: transform .2s, background .2s;
+      }
+      .button:hover { transform: translateY(-2px); background: #c95743; }
+      .button-outline { border-color: rgb(255 255 255 / 72%); background: rgb(255 255 255 / 12%); }
+      .button-outline:hover { background: rgb(255 255 255 / 22%); }
+      .menu { display: none; }
+      .hero-content {
+        display: grid;
+        min-height: 690px;
+        align-items: center;
+        grid-template-columns: 1.15fr .85fr;
+        gap: 54px;
+        padding-top: 82px;
+        padding-bottom: 58px;
+      }
+      .hero-copy { max-width: 650px; text-shadow: 0 2px 20px rgb(0 0 0 / 25%); }
+      .eyebrow { margin-bottom: 16px; color: #e5ebce; font-size: .78rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+      .hero h1 { margin-bottom: 22px; font-size: clamp(3.2rem, 7vw, 5.8rem); letter-spacing: -.035em; }
+      .hero h1 em { color: #d7e2bb; font-weight: 400; }
+      .hero-copy > p:not(.eyebrow) { max-width: 520px; margin-bottom: 30px; color: rgb(255 255 255 / 90%); font-size: 1.12rem; }
+      .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+      .hero-photo {
+        width: min(100%, 365px);
+        aspect-ratio: 3 / 4;
+        justify-self: center;
+        border: 1px solid rgb(255 255 255 / 35%);
+        border-radius: 190px 190px 24px 24px;
+        object-fit: cover;
+        box-shadow: 0 24px 70px rgb(0 0 0 / 26%);
+      }
+      .section { padding-block: 100px; }
+      .section-heading { max-width: 700px; margin-bottom: 42px; }
+      .section-heading .eyebrow { color: var(--coral); }
+      .categories { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+      .category {
+        overflow: hidden;
+        border-radius: 18px;
+        background: #fffef9;
+        box-shadow: 0 6px 24px rgb(36 75 55 / 7%);
+      }
+      .category img { width: 100%; aspect-ratio: 4 / 4.6; object-fit: cover; transition: transform .5s; }
+      .category:hover img { transform: scale(1.04); }
+      .category h3 { margin: 0; padding: 18px 20px 21px; color: var(--green); font-size: 1.25rem; }
+      .story { background: var(--green); color: white; }
+      .story-inner { display: grid; align-items: center; grid-template-columns: .9fr 1.1fr; gap: 72px; }
+      .story img { width: 100%; max-height: 560px; aspect-ratio: 4 / 5; border-radius: 20px; object-fit: cover; }
+      .story h2 { color: white; }
+      .story-copy > p { margin: 24px 0 0; color: rgb(255 255 255 / 84%); font-size: 1.08rem; }
+      .quote { padding-left: 18px; border-left: 2px solid #d7e2bb; font-family: var(--serif); font-size: 1.18rem !important; font-style: italic; }
+      .quote-by { margin-top: 8px !important; font-size: .85rem !important; }
+      .gallery { columns: 3; column-gap: 16px; }
+      .gallery img { width: 100%; margin-bottom: 16px; border-radius: 16px; break-inside: avoid; }
+      .visit { background: var(--sage); }
+      .visit-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+      .details { display: grid; gap: 24px; margin: 30px 0; padding: 0; list-style: none; }
+      .details li { display: grid; grid-template-columns: 28px 1fr; gap: 14px; align-items: start; }
+      .detail-icon { color: var(--coral); font-size: 1.25rem; }
+      .hours { display: grid; grid-template-columns: 155px auto; gap: 4px 16px; }
+      .hours strong { font-weight: 700; }
+      .visit .actions { gap: 10px; }
+      .button-green { background: var(--green); }
+      .button-green:hover { background: var(--green-deep); }
+      .map {
+        width: 100%;
+        min-height: 410px;
+        border: 0;
+        border-radius: 20px;
+        box-shadow: 0 12px 32px rgb(36 75 55 / 12%);
+      }
+      footer { padding: 28px 24px; background: var(--green-deep); color: rgb(255 255 255 / 78%); text-align: center; font-size: .88rem; }
+      footer p { margin: 0; }
+
+      @media (max-width: 800px) {
+        .wrap { width: min(100% - 36px, 620px); }
+        .hero, .hero-content { min-height: auto; }
+        .hero-content { grid-template-columns: 1fr; gap: 38px; padding-top: 140px; padding-bottom: 60px; }
+        .hero h1 { max-width: 560px; font-size: clamp(3.2rem, 12vw, 5rem); }
+        .hero-photo { width: min(76%, 340px); }
+        .categories { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+        .story-inner, .visit-inner { grid-template-columns: 1fr; gap: 36px; }
+        .story img { max-height: 460px; }
+        .map { min-height: 350px; }
+        .section { padding-block: 74px; }
+      }
+      @media (max-width: 540px) {
+        .wrap { width: calc(100% - 32px); }
+        .header-inner { min-height: 72px; }
+        .brand { font-size: 1.12rem; }
+        .header-inner > .button { min-height: 42px; padding: 9px 15px; font-size: .88rem; }
+        .nav { display: none; }
+        .menu { position: relative; display: block; }
+        .menu summary { display: block; padding: 8px 0; cursor: pointer; font-size: 1.5rem; line-height: 1; list-style: none; }
+        .menu summary::-webkit-details-marker { display: none; }
+        .menu nav { position: absolute; top: 42px; right: 0; display: grid; min-width: 155px; gap: 0; padding: 8px; border-radius: 12px; background: var(--green-deep); box-shadow: 0 10px 30px rgb(0 0 0 / 20%); }
+        .menu nav a { padding: 10px; }
+        .hero-content { padding-top: 126px; }
+        .hero h1 { font-size: 3.25rem; }
+        .hero-copy > p:not(.eyebrow) { font-size: 1rem; }
+        .button { min-height: 46px; padding: 10px 17px; font-size: .92rem; }
+        .categories { gap: 12px; }
+        .category h3 { padding: 14px; font-size: 1.05rem; }
+        .gallery { columns: 2; column-gap: 10px; }
+        .gallery img { margin-bottom: 10px; border-radius: 12px; }
+        .hours { grid-template-columns: 1fr; gap: 0; }
+        .hours strong { margin-top: 12px; }
+        .visit .actions { align-items: stretch; flex-direction: column; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after { transition-duration: .01ms !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#" aria-label="Eufloria Garden, início"><span class="brand-mark" aria-hidden="true">❧</span> Eufloria Garden</a>
+        <nav class="nav" aria-label="Navegação principal">
+          <a href="#plantas">Plantas</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#visite">Visite</a>
+        </nav>
+        <details class="menu">
+          <summary aria-label="Abrir menu">☰</summary>
+          <nav aria-label="Navegação móvel">
+            <a href="#plantas">Plantas</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#visite">Visite</a>
+          </nav>
+        </details>
+        <a class="button" href="https://wa.me/5519981586113?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Eufloria%20Garden." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap hero-content">
+          <div class="hero-copy">
+            <p class="eyebrow">Seu cantinho mais verde começa aqui</p>
+            <h1>Um jardim inteiro <em>esperando</em> por você.</h1>
+            <p>Plantas ornamentais, flores, palmeiras e folhagens com atendimento de quem ama o que faz.</p>
+            <div class="actions">
+              <a class="button" href="https://wa.me/5519981586113?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Eufloria%20Garden." target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+              <a class="button button-outline" href="https://www.google.com/maps/place/Floricultura+Eufloria+Garden/@-22.9207687,-47.2491577,17z/" target="_blank" rel="noopener noreferrer">Como chegar</a>
+            </div>
+          </div>
+          <img class="hero-photo" src="src/assets/005.webp" alt="Antúrio vermelho da Eufloria Garden">
+        </div>
+      </section>
+
+      <section class="section wrap" id="plantas">
+        <div class="section-heading">
+          <p class="eyebrow">O que você encontra</p>
+          <h2>Variedade para todo tipo de cantinho</h2>
+        </div>
+        <div class="categories">
+          <article class="category">
+            <img src="src/assets/005.webp" alt="Antúrio vermelho em destaque" loading="lazy">
+            <h3>Plantas com flor</h3>
+          </article>
+          <article class="category">
+            <img src="src/assets/004.webp" alt="Folhagens ornamentais variadas" loading="lazy">
+            <h3>Folhagens</h3>
+          </article>
+          <article class="category">
+            <img src="src/assets/003.webp" alt="Palmeira no viveiro da Eufloria Garden" loading="lazy">
+            <h3>Palmeiras</h3>
+          </article>
+          <article class="category">
+            <img src="src/assets/002.webp" alt="Mudas e forrações cultivadas no viveiro" loading="lazy">
+            <h3>Mudas e forrações</h3>
+          </article>
+        </div>
+      </section>
+
+      <section class="story">
+        <div class="wrap section story-inner">
+          <img src="src/assets/008.webp" alt="Interior do viveiro coberto da Eufloria Garden" loading="lazy">
+          <div class="story-copy">
+            <p class="eyebrow">Um lugar para respirar verde</p>
+            <h2>Um garden center de verdade, à beira da rodovia.</h2>
+            <p>Nosso viveiro coberto reúne centenas de espécies — de mudas e forrações a palmeiras e plantas de interior. Venha passear entre as plantas, tirar dúvidas e levar o verde para casa.</p>
+            <p class="quote">“Atendimento nota 10. Muitas variedades de plantas, podem conferir que não vão se arrepender.”</p>
+            <p class="quote-by">— Avaliação no Google</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section wrap" id="galeria">
+        <div class="section-heading">
+          <p class="eyebrow">Um pouco do nosso espaço</p>
+          <h2>Um passeio pelo viveiro</h2>
+        </div>
+        <div class="gallery">
+          <img src="src/assets/001.webp" alt="Fachada da Floricultura Eufloria Garden" loading="lazy">
+          <img src="src/assets/002.webp" alt="Mudas e forrações do viveiro" loading="lazy">
+          <img src="src/assets/003.webp" alt="Palmeira e flores no espaço da floricultura" loading="lazy">
+          <img src="src/assets/006.webp" alt="Planta ornamental em vaso" loading="lazy">
+          <img src="src/assets/007.webp" alt="Área coberta do viveiro Eufloria Garden" loading="lazy">
+        </div>
+      </section>
+
+      <section class="section visit" id="visite">
+        <div class="wrap visit-inner">
+          <div>
+            <p class="eyebrow">Estamos esperando por você</p>
+            <h2>Venha nos visitar</h2>
+            <ul class="details">
+              <li><span class="detail-icon" aria-hidden="true">⌖</span><span>Rod. Jornalista Francisco Aguirre Proença, km 16,5<br>Monte Mor - SP</span></li>
+              <li><span class="detail-icon" aria-hidden="true">☎</span><a href="https://wa.me/5519981586113" target="_blank" rel="noopener noreferrer">(19) 98158-6113</a></li>
+              <li>
+                <span class="detail-icon" aria-hidden="true">◷</span>
+                <div class="hours"><strong>Segunda a sábado</strong><span>08:00 – 18:00</span><strong>Domingo</strong><span>08:00 – 13:00</span></div>
+              </li>
+            </ul>
+            <div class="actions">
+              <a class="button" href="https://wa.me/5519981586113?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Eufloria%20Garden." target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
+              <a class="button button-green" href="https://www.google.com/maps/place/Floricultura+Eufloria+Garden/@-22.9207687,-47.2491577,17z/" target="_blank" rel="noopener noreferrer">Abrir no Google Maps</a>
+            </div>
+          </div>
+          <iframe class="map" title="Mapa da Eufloria Garden" src="https://maps.google.com/maps?q=-22.9207687,-47.2491577&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer><p>© <span id="year">2026</span> Floricultura Eufloria Garden · Monte Mor - SP</p></footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

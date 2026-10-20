@@ -1,24 +1,72 @@
-# Eufloria Garden Floricultura
+# Eufloria Garden 🌿
 
-@asset:da_01m5d27e0qfdkbe3c598kyctpj:"https://www.gardencidadedasflores.com.br/ - www_gardencidadedasflores_com_br_1920w_default.h2d by html.to.design ❤️ FREE version - 20/10/2026, 13:24:22 GMT-3" Faça para mim um site para essa floricultura, anexei as imagens e os dados dela estão nesse link https://www.google.com/maps/place/Floricultura+Eufloria+Garden/@-22.9207637,-47.2517326,17z/data=!4m14!1m7!3m6!1s0x94c8bbde788a72d3:0x3b210736ddb3e8c4!2sFloricultura+Eufloria+Garden!8m2!3d-22.9207687!4d-47.2491577!16s%2Fg%2F11y3n098gk!3m5!1s0x94c8bbde788a72d3:0x3b210736ddb3e8c4!8m2!3d-22.9207687!4d-47.2491577!16s%2Fg%2F11y3n098gk?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D
+Site da **Floricultura Eufloria Garden**, em Monte Mor — SP. Um espaço para apresentar as plantas, mostrar um pouco do viveiro e facilitar o contato e a visita à floricultura.
 
-This project was built with [Lovable](https://lovable.dev).
+## ✨ O que tem por aqui
 
-## Build with Lovable
+- Apresentação da floricultura e de suas categorias de plantas
+- Galeria de imagens do viveiro
+- Atalhos para conversa pelo WhatsApp e localização no Google Maps
+- Endereço, telefone e horários de atendimento
+- Layout adaptado para celular, tablet e desktop
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/584bb6c0-3cd0-46de-a137-f16f15fea00f).
+## 🚀 Comece a usar
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+### Site em HTML
 
-## Development
+Para abrir a página estática, abra a pasta do projeto no VS Code, clique com o botão direito em `index.html` e escolha **Open with Live Server**.
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Essa página funciona diretamente no navegador. As fotos são arquivos locais; o mapa e as fontes carregam de serviços externos, então precisam de conexão com a internet.
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+### Publicar no GitHub Pages
+
+O site estático é publicado automaticamente pelo GitHub Actions sempre que há um envio para a branch `main`. O fluxo publica `index.html` e as imagens de `src/assets`:
+
+1. Envie as alterações para o GitHub na branch `main`.
+2. No repositório, abra **Settings → Pages** e selecione **GitHub Actions** como origem da publicação, se ainda não estiver selecionada.
+3. Acompanhe a publicação em **Actions**. Quando o fluxo terminar, o endereço do site aparecerá nos detalhes da execução e em **Settings → Pages**.
+
+O endereço esperado deste projeto é `https://cargnieli2016.github.io/eufloria-garden-floricultura/`.
+
+### Aplicação de desenvolvimento
+
+O projeto também conta com uma aplicação React, executada com Vite. É necessário ter Node.js e npm instalados.
+
+```bash
+npm install
 npm run dev
 ```
+
+Abra no navegador o endereço local exibido no terminal.
+
+Para gerar a versão de produção e visualizá-la localmente:
+
+```bash
+npm run build
+npm run preview
+```
+
+Para executar os testes:
+
+```bash
+npm test
+```
+
+## 📍 Informações
+
+- **Endereço:** Rod. Jornalista Francisco Aguirre Proença, km 16,5 — Monte Mor, SP
+- **WhatsApp:** [(19) 98158-6113](https://wa.me/5519981586113)
+- **Segunda a sábado:** 08:00–18:00
+- **Domingo:** 08:00–13:00
+
+## 🧰 Tecnologias
+
+- HTML e CSS na página estática
+- React e TypeScript
+- Vite
+- TanStack Start e TanStack Router
+- Tailwind CSS
+
+## 📄 Licença
+
+Este projeto não especifica uma licença de uso ou redistribuição.
