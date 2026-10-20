@@ -108,15 +108,6 @@
       .hero h1 em { color: #d7e2bb; font-weight: 400; }
       .hero-copy > p:not(.eyebrow) { max-width: 520px; margin-bottom: 30px; color: rgb(255 255 255 / 90%); font-size: 1.12rem; }
       .actions { display: flex; flex-wrap: wrap; gap: 12px; }
-      .hero-photo {
-        width: min(100%, 365px);
-        aspect-ratio: 3 / 4;
-        justify-self: center;
-        border: 1px solid rgb(255 255 255 / 35%);
-        border-radius: 190px 190px 24px 24px;
-        object-fit: cover;
-        box-shadow: 0 24px 70px rgb(0 0 0 / 26%);
-      }
       .section { padding-block: 100px; }
       .section-heading { max-width: 700px; margin-bottom: 42px; }
       .section-heading .eyebrow { color: var(--coral); }
@@ -162,9 +153,8 @@
       @media (max-width: 800px) {
         .wrap { width: min(100% - 36px, 620px); }
         .hero, .hero-content { min-height: auto; }
-        .hero-content { grid-template-columns: 1fr; gap: 38px; padding-top: 140px; padding-bottom: 60px; }
+        .hero-content { grid-template-columns: 1fr; padding-top: 140px; padding-bottom: 60px; }
         .hero h1 { max-width: 560px; font-size: clamp(3.2rem, 12vw, 5rem); }
-        .hero-photo { width: min(76%, 340px); }
         .categories { grid-template-columns: repeat(2, 1fr); gap: 14px; }
         .story-inner, .visit-inner { grid-template-columns: 1fr; gap: 36px; }
         .story img { max-height: 460px; }
@@ -233,7 +223,6 @@
               <a class="button button-outline" href="https://www.google.com/maps/place/Floricultura+Eufloria+Garden/@-22.9207687,-47.2491577,17z/" target="_blank" rel="noopener noreferrer">Como chegar</a>
             </div>
           </div>
-          <img class="hero-photo" src="src/assets/003.webp" alt="Palmeira ornamental no viveiro da Eufloria Garden">
         </div>
       </section>
 
