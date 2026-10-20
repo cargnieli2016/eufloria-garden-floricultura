@@ -63,23 +63,27 @@ function Index() {
         </div>
       </header>
 
-      <section className="relative flex min-h-[62vh] items-end overflow-hidden">
-        <img src={hero.url} alt="Estufa da Eufloria Garden com orquídeas e plantas" width={1920} height={500} fetchPriority="high" className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-hero-overlay" />
-        <div className="text-legibility relative mx-auto w-full max-w-6xl px-6 pb-20 text-primary-foreground">
-          <h1 className="max-w-3xl text-5xl leading-[1.05] md:text-7xl">
-            Um jardim inteiro <em className="text-secondary">esperando</em> por você.
-          </h1>
-          <p className="mt-6 max-w-xl text-lg opacity-90">
-            Plantas ornamentais, flores, palmeiras e folhagens com atendimento de quem ama o que faz.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href={WHATS} target="_blank" rel="noreferrer" className="rounded-full bg-accent px-7 py-3 font-semibold text-accent-foreground">
-              Falar no WhatsApp
-            </a>
-            <a href={MAPS} target="_blank" rel="noreferrer" className="rounded-full border border-primary-foreground/70 bg-primary-foreground/15 px-7 py-3 font-semibold backdrop-blur-sm">
-              Como chegar
-            </a>
+      <section className="relative overflow-hidden bg-primary text-primary-foreground">
+        <div className="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-primary-foreground/5 blur-3xl" />
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-20 pt-32 md:grid-cols-[1.15fr_0.85fr] md:pb-24 md:pt-40">
+          <div className="text-legibility">
+            <h1 className="max-w-3xl text-5xl leading-[1.05] md:text-7xl">
+              Um jardim inteiro <em className="text-secondary">esperando</em> por você.
+            </h1>
+            <p className="mt-6 max-w-xl text-lg opacity-90">
+              Plantas ornamentais, flores, palmeiras e folhagens com atendimento de quem ama o que faz.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href={WHATS} target="_blank" rel="noreferrer" className="rounded-full bg-accent px-7 py-3 font-semibold text-accent-foreground">
+                Falar no WhatsApp
+              </a>
+              <a href={MAPS} target="_blank" rel="noreferrer" className="rounded-full border border-primary-foreground/70 bg-primary-foreground/15 px-7 py-3 font-semibold">
+                Como chegar
+              </a>
+            </div>
+          </div>
+          <div className="relative mx-auto w-full max-w-xs md:max-w-sm">
+            <img src={f5.url} alt="Mão segurando um antúrio vermelho recém-colhido" width={381} height={677} fetchPriority="high" className="aspect-[3/4] w-full rounded-3xl object-cover shadow-2xl ring-1 ring-primary-foreground/20" />
           </div>
         </div>
       </section>
