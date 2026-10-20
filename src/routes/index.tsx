@@ -36,7 +36,7 @@ const categorias = [
   { icon: Sprout, nome: "Mudas e forrações", img: f2.url },
 ];
 
-const galeria = [f1, f8, f6, f7, f4, f2];
+const galeria = [f8, f6, f7, f4, f2];
 
 const horarios = [
   ["Segunda a sábado", "08:00 – 18:00"],
